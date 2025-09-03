@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://to-do-list-backend.up.railway.app'
-';  
+const BASE_URL = 'https://to-do-list-backend.up.railway.app';
 
 export const getTasks = () => axios.get(`${BASE_URL}/tasks`);
 
