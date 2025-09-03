@@ -23,7 +23,7 @@ function AddTask() {
       date,
     };
 
-    fetch("https://to-do-list-backend.up.railway.app/api/tasks", {
+    fetch("http://31.97.207.137:8090/api/tasks", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTask),

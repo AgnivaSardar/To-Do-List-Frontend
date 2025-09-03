@@ -9,7 +9,7 @@ function CompletedTask() {
   const navigate = useNavigate();
 
   const loadTasks = () => {
-    fetch("https://to-do-list-backend.up.railway.app/api/tasks/completed")
+    fetch("http://31.97.207.137:8090/api/tasks/completed")
       .then((res) => res.json())
       .then((data) => {
         setTasks(data);
@@ -27,7 +27,7 @@ function CompletedTask() {
 
   const handleToggleCompleted = (task) => {
     const updatedTask = { ...task, status: !task.status };
-    fetch(`https://to-do-list-backend.up.railway.app/api/tasks/${task.id}`, {
+    fetch(`http://31.97.207.137:8090/api/tasks/${task.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedTask),
@@ -45,7 +45,7 @@ function CompletedTask() {
 
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this task?")) {
-      fetch(`https://to-do-list-backend.up.railway.app/api/tasks/${id}`, { method: "DELETE" })
+      fetch(`http://31.97.207.137:8090/api/tasks/${id}`, { method: "DELETE" })
         .then(() => loadTasks())
         .catch(() => alert("Failed to delete task"));
     }
