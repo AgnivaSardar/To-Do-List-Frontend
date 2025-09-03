@@ -23,7 +23,7 @@ function AddTask() {
       date,
     };
 
-    fetch("https://to-do-list-backend-5.onrender.com/api/tasks", {
+    fetch("https://to-do-list-backend-6.onrender.com/api/tasks", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTask),

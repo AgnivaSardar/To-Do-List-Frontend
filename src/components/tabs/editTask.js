@@ -15,7 +15,7 @@ function EditTask() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://to-do-list-backend-5.onrender.com/api/tasks/${id}`)
+    fetch(`https://to-do-list-backend-6.onrender.com/api/tasks/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Task not found");
         return res.json();
@@ -47,7 +47,7 @@ function EditTask() {
       date,
     };
 
-    fetch(`https://to-do-list-backend-5.onrender.com/api/tasks/${id}`, {
+    fetch(`https://to-do-list-backend-6.onrender.com/api/tasks/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedTask),
